@@ -22,13 +22,10 @@
     self.dataArray = @[
         @[
             @"常规两个按钮alert",
-            @"简易调试使用alert，单按钮，标题默认为“确定”",
             @"不定数量按钮alert",
-            @"无按钮toast样式",
-            @"单文字HUD",
-            @"带indicatorView的HUD",
-            @"带进度条的HUD，成功！",
-            @"带进度条的HUD，失败！",
+            @"toast样式",
+            @"Loading样式",
+            @"progress样式",
         ],
         @[
             @"UIAlertController-Alert",
@@ -99,7 +96,48 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        
+        if (indexPath.row == 0){
+            
+            [SysAlertView yk_showAlertViewWithTitle:@"两个按钮alert" message:@"按钮响应回调" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" cancelButtonBlock:^(NSUInteger buttonIndex) {
+                NSLog(@"cancelButtonBlock 1");
+            } otherButtonBlock:^(NSUInteger buttonIndex) {
+                NSLog(@"otherButtonBlock 1");
+            }];
+            
+        }else if (indexPath.row == 1){
+            [SysAlertView yk_showAlertViewWithTitle:@"自定义按钮数量" message:@"支持按钮响应回调,通过index区分" cancelButtonTitle:@"取消" buttonIndexBlock:^(NSUInteger buttonIndex) {
+                NSLog(@"buttonIndex = %ld",buttonIndex);
+            } otherButtonTitles:@"确定",@"测试",@"自定义", nil];
+        }else if (indexPath.row == 2){
+            
+            [SysAlertView yk_showToastViewWithTitle:@"Toast" message:@"简单的Toast样式" duration:1.0 completion:^(NSUInteger buttonIndex) {
+                NSLog(@"Toast completion");
+            }];
+            
+        }else if (indexPath.row == 3){
+            
+            [SysAlertView yk_showLoadingHUDWithTitle:@"Loading" message:@"这是子标题"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SysAlertView yk_dismissHUD];
+            });
+            
+        }else if (indexPath.row == 4){
+         
+            [SysAlertView yk_showProgressHUDWithTitle:@"进度条" message:@"这是进度条的子标题"];
+            __block float count = 0.;
+            [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+                count += 0.05;
+                [SysAlertView yk_setHUDProgress:count];
+                if (count > 1) {
+                    [timer invalidate];
+                    [SysAlertView yk_setHUDWithIsSuccess:YES title:@"成功了" message:@"成功子标题"];
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [SysAlertView yk_dismissHUD];
+                    });
+                }
+            }];
+            
+        }
     }else{
         if (indexPath.row == 0){
             [self yk_showAlertWithTitle:@"AlertController-Alert" message:@"基于UIAlertController封装,支持自定义添加Action和响应" appearanceBlock:^(SysAlertController * _Nonnull maker) {
