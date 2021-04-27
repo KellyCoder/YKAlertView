@@ -42,7 +42,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), 
 
 ```
 
-### 4.进度条样式 ###
+### 5.进度条样式 ###
 
 ```
 [SysAlertView yk_showProgressHUDWithTitle:@"进度条" message:@"这是进度条的子标题"];
@@ -136,7 +136,7 @@ __block float count = 0.;
  
  ```
  
- ### 4.输入框样式###
+ ### 5.输入框样式 ###
  
  ```
  [self yk_showAlertWithTitle:@"输入框UIAlertController-Alert" message:@"添加输入框视图" appearanceBlock:^(SysAlertController * _Nonnull maker) {
@@ -174,7 +174,7 @@ __block float count = 0.;
 
 ```
 
-### 2.无标题AlertSheet提示弹窗,链式语法添加action###
+### 2.无标题AlertSheet提示弹窗,链式语法添加action ###
 ```
 [YKAlertView yk_showAlertSheetWithTitle:nil message:nil appearanceBlock:^(YKAlertView * _Nonnull maker) {
     maker.addActionTitle(@"标题1");
