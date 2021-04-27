@@ -1,5 +1,6 @@
 # YKAlertView
- 基于UIAlertView/UIAlertController封装，支持链式语法自定义按钮，可根据按钮index区分响应。
+ 一. 基于UIAlertView/UIAlertController封装，支持链式语法自定义按钮，可根据按钮index区分响应;
+ 二. 仿微信底部弹窗,支持链式语法添加自定义按钮,可选添加标题与副标题,支持xib自定义视图, 可根据按钮index区分响应
  详细用法参考[YKAlertView](https://github.com/KellyCoder/YKAlertView)
  ## SysAlertView ##
  ### 1.双按钮提示弹窗 ###
@@ -155,7 +156,31 @@ __block float count = 0.;
  
  ```
 
-
+## YKAlertView ##
+### 1.带标题自定义AlertSheet提示弹窗,链式语法添加自定义action ###
  
+```
+[YKAlertView yk_showAlertSheetWithTitle:@"仿微信底部弹窗" message:@"支持链式语法添加自定义操作按钮,可选择添加标题和副标题" appearanceBlock:^(YKAlertView * _Nonnull maker) {
+    maker.addActionTitle(@"标题1");
+    maker.addActionTitle(@"标题2");
+    maker.addActionTitle(@"标题3");
+    maker.addActionTitle(@"标题4");
+    maker.addActionTitle(@"标题5");
+    maker.addActionTitle(@"标题6");
+} actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+    NSLog(@"自定义sheet %@--%ld", title, buttonIndex);
+}];
 
+```
 
+### 2.无标题AlertSheet提示弹窗,链式语法添加action###
+```
+[YKAlertView yk_showAlertSheetWithTitle:nil message:nil appearanceBlock:^(YKAlertView * _Nonnull maker) {
+    maker.addActionTitle(@"标题1");
+    maker.addActionTitle(@"标题2");
+    maker.addActionTitle(@"标题3");
+} actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+    NSLog(@"自定义sheet %@--%ld", title, buttonIndex);
+}];
+
+```
