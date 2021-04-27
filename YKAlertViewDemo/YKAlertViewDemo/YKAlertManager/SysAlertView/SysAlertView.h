@@ -9,6 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define yk_dispatch_main_async_safe(block)\
+    if ([NSThread isMainThread]) {\
+        block();\
+    } else {\
+        dispatch_async(dispatch_get_main_queue(), block);\
+    }
+
 typedef NS_ENUM(NSUInteger, SysAlertType){
     SysAlertTypeNormal,
     SysAlertTypeToast,
@@ -21,9 +28,29 @@ typedef NS_ENUM(NSUInteger, SysAlertHUDType){
     SysAlertHUDTypeProgress
 };
 
+/// 主线程调用,UIAlertView显示必须在主线程
+/// @param block block
+static inline void yk_getSafeMainQueue(_Nonnull dispatch_block_t block){
+    yk_dispatch_main_async_safe(block);
+}
+
 /// 操作按钮执行回调
 /// @param buttonIndex 按钮下标(根据添加顺讯)
 typedef void(^SysAlertViewActionBlock)(NSUInteger buttonIndex);
+
+/// 两个按钮AlertView,简单C调用
+/// @param title title
+/// @param message message
+/// @param cancelButtonTitle cancelButtonTitle
+/// @param otherButtonTitle otherButtonTitle
+/// @param cancelBlock 取消按钮回调
+/// @param otherBlock 其他按钮回调
+void yk_showAlertViewWithTitle(NSString * _Nullable title,
+                               NSString * _Nullable message,
+                               NSString * _Nullable cancelButtonTitle,
+                               SysAlertViewActionBlock _Nullable cancelBlock,
+                               NSString * _Nullable otherButtonTitle,
+                               SysAlertViewActionBlock _Nullable otherBlock);
 
 @interface SysAlertView : UIAlertView
 

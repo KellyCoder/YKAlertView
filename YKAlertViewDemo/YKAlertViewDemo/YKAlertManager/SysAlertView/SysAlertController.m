@@ -38,8 +38,6 @@ typedef void(^SysAlertActionConfig)(SysAlertActionBlock actionBlock);
 @interface SysAlertController ()
 
 @property (nonatomic, strong) NSMutableArray <SysAlertActionModel *> *alertActionArray;
-//配置action
-//- (SysJXTAlertActionConfig)alertActionConfig;
 
 @end
 
@@ -54,6 +52,11 @@ typedef void(^SysAlertActionConfig)(SysAlertActionBlock actionBlock);
     [super viewDidDisappear:animated];
     if (self.alertDidDismiss) {
         self.alertDidDismiss();
+    }
+    
+    if (self.showSaveSheetView) {
+        [self.showSaveSheetView removeFromSuperview];
+        self.showSaveSheetView = nil;
     }
 }
 
@@ -160,6 +163,22 @@ typedef void(^SysAlertActionConfig)(SysAlertActionBlock actionBlock);
         appearanceBlock(maker);
         //配置action
         maker.alertActionConfig(actionBlock);
+        
+        //适配ipad
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && preferredStyle == UIAlertControllerStyleActionSheet) {
+            
+            UIWindow *window = [UIApplication sharedApplication].keyWindow;
+            if (!maker.showSaveSheetView) {
+                maker.showSaveSheetView = [[UIView alloc] init];
+                [window addSubview:maker.showSaveSheetView];
+            }
+            maker.showSaveSheetView.center = window.center;
+            maker.showSaveSheetView.backgroundColor = [UIColor redColor];
+            
+            maker.popoverPresentationController.sourceView = maker.showSaveSheetView;
+            maker.popoverPresentationController.sourceRect = maker.showSaveSheetView.bounds;
+            maker.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionDown;
+        }
         
         if (maker.alertDidShown) {
             [self presentViewController:maker animated:YES completion:^{

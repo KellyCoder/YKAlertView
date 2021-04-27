@@ -13,6 +13,23 @@ static NSTimeInterval const SysAlertToastShowDurationDefault = 1.0f;
 static NSString *const SysAlertViewSubViewKey = @"accessoryView";
 
 
+void yk_showAlertViewWithTitle(NSString * _Nullable title,
+                               NSString * _Nullable message,
+                               NSString * _Nullable cancelButtonTitle,
+                               SysAlertViewActionBlock _Nullable cancelBlock,
+                               NSString * _Nullable otherButtonTitle,
+                               SysAlertViewActionBlock _Nullable otherBlock){
+    yk_getSafeMainQueue(^{
+        [SysAlertView yk_showAlertViewWithTitle:title
+                                        message:message
+                              cancelButtonTitle:cancelButtonTitle
+                               otherButtonTitle:otherButtonTitle
+                              cancelButtonBlock:cancelBlock
+                               otherButtonBlock:otherBlock];
+    });
+}
+
+
 @interface SysAlertView () <UIAlertViewDelegate>
 
 @end

@@ -28,6 +28,8 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface SysAlertController : UIAlertController
 @property (nullable, nonatomic, copy) void (^alertDidShown)(void);
 // Alert关闭后回调
 @property (nullable, nonatomic, copy) void (^alertDidDismiss)(void);
+// 适配ipad的视图
+@property (nonatomic, strong) UIView *showSaveSheetView;
 
 // 链式构造,添加alertAction按钮
 - (SysActionTitleBlock)addActionTitle;

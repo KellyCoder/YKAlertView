@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6140E32636CC7700DB99CD /* YKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6140E22636CC7700DB99CD /* YKAlertView.m */; };
+		8D6140EA2636CE1800DB99CD /* YKActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6140E82636CE1800DB99CD /* YKActionSheetCell.m */; };
+		8D6140EB2636CE1800DB99CD /* YKActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6140E92636CE1800DB99CD /* YKActionSheetCell.xib */; };
 		8D74BBD026354B3F007178C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BBCF26354B3F007178C8 /* AppDelegate.m */; };
 		8D74BBDB26354B42007178C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D74BBDA26354B42007178C8 /* Assets.xcassets */; };
 		8D74BBDE26354B42007178C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D74BBDC26354B42007178C8 /* LaunchScreen.storyboard */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D6140DD2636C1EB00DB99CD /* YKAlertViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAlertViewHeader.h; sourceTree = "<group>"; };
+		8D6140E12636CC7700DB99CD /* YKAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAlertView.h; sourceTree = "<group>"; };
+		8D6140E22636CC7700DB99CD /* YKAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAlertView.m; sourceTree = "<group>"; };
+		8D6140E72636CE1800DB99CD /* YKActionSheetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKActionSheetCell.h; sourceTree = "<group>"; };
+		8D6140E82636CE1800DB99CD /* YKActionSheetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKActionSheetCell.m; sourceTree = "<group>"; };
+		8D6140E92636CE1800DB99CD /* YKActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YKActionSheetCell.xib; sourceTree = "<group>"; };
 		8D74BBCB26354B3F007178C8 /* YKAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D74BBCE26354B3F007178C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D74BBCF26354B3F007178C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +92,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D6140D92636B3A700DB99CD /* YKAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8D6140DD2636C1EB00DB99CD /* YKAlertViewHeader.h */,
+				8D6140E12636CC7700DB99CD /* YKAlertView.h */,
+				8D6140E22636CC7700DB99CD /* YKAlertView.m */,
+				8D6140E72636CE1800DB99CD /* YKActionSheetCell.h */,
+				8D6140E82636CE1800DB99CD /* YKActionSheetCell.m */,
+				8D6140E92636CE1800DB99CD /* YKActionSheetCell.xib */,
+			);
+			path = YKAlertView;
+			sourceTree = "<group>";
+		};
 		8D74BBC226354B3E007178C8 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +162,7 @@
 		8D74BC4C26355E41007178C8 /* YKAlertManager */ = {
 			isa = PBXGroup;
 			children = (
+				8D6140D92636B3A700DB99CD /* YKAlertView */,
 				8D74BC4D26355E48007178C8 /* SysAlertView */,
 			);
 			path = YKAlertManager;
@@ -259,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6140EB2636CE1800DB99CD /* YKActionSheetCell.xib in Resources */,
 				8D74BBDE26354B42007178C8 /* LaunchScreen.storyboard in Resources */,
 				8D74BBDB26354B42007178C8 /* Assets.xcassets in Resources */,
 			);
@@ -286,9 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D74BBD026354B3F007178C8 /* AppDelegate.m in Sources */,
+				8D6140E32636CC7700DB99CD /* YKAlertView.m in Sources */,
 				8D74BBE126354B42007178C8 /* main.m in Sources */,
 				8D74BC0B26354BC1007178C8 /* TableViewController.m in Sources */,
 				8D74BC5026355E81007178C8 /* SysAlertView.m in Sources */,
+				8D6140EA2636CE1800DB99CD /* YKActionSheetCell.m in Sources */,
 				8D74BC5926355E9C007178C8 /* SysAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kelly.Platform.com.YKAlertViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -478,6 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kelly.Platform.com.YKAlertViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

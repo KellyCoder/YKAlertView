@@ -8,6 +8,8 @@
 #import "TableViewController.h"
 #import "SysAlertHeader.h"
 
+#import "YKAlertViewHeader.h"
+
 @interface TableViewController ()
 
 @property (nonatomic, strong) NSArray * dataArray;
@@ -33,6 +35,10 @@
             @"无按钮Alert-toast",
             @"无按钮ActionSheet-toast",
             @"输入框UIAlertController-Alert",
+        ],
+        @[
+            @"仿微信,自定义带标题AlertSheet",
+            @"不带标题AlertSheet",
         ]
     ];
     
@@ -81,9 +87,15 @@
         label.font = [UIFont boldSystemFontOfSize:20];
         label.textAlignment = NSTextAlignmentCenter;
         return label;
-    }else{
+    }else if (section == 1){
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
         label.text = @"AlertController";
+        label.font = [UIFont boldSystemFontOfSize:20];
+        label.textAlignment = NSTextAlignmentCenter;
+        return label;
+    }else{
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
+        label.text = @"YKAlertSheet";
         label.font = [UIFont boldSystemFontOfSize:20];
         label.textAlignment = NSTextAlignmentCenter;
         return label;
@@ -122,7 +134,7 @@
             });
             
         }else if (indexPath.row == 4){
-         
+            
             [SysAlertView yk_showProgressHUDWithTitle:@"进度条" message:@"这是进度条的子标题"];
             __block float count = 0.;
             [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
@@ -138,7 +150,7 @@
             }];
             
         }
-    }else{
+    }else if (indexPath.section == 1){
         if (indexPath.row == 0){
             [self yk_showAlertWithTitle:@"AlertController-Alert" message:@"基于UIAlertController封装,支持自定义添加Action和响应" appearanceBlock:^(SysAlertController * _Nonnull maker) {
                 
@@ -211,6 +223,29 @@
             }];
             
         }
+    }else {
+        
+        if (indexPath.row == 0){
+            [YKAlertView yk_showAlertSheetWithTitle:@"仿微信底部弹窗" message:@"支持链式语法添加自定义操作按钮,可选择添加标题和副标题" appearanceBlock:^(YKAlertView * _Nonnull maker) {
+                maker.addActionTitle(@"标题1");
+                maker.addActionTitle(@"标题2");
+                maker.addActionTitle(@"标题3");
+                maker.addActionTitle(@"标题4");
+                maker.addActionTitle(@"标题5");
+                maker.addActionTitle(@"标题6");
+            } actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+                NSLog(@"自定义sheet %@--%ld", title, buttonIndex);
+            }];
+        }else if (indexPath.row == 1){
+            [YKAlertView yk_showAlertSheetWithTitle:nil message:nil appearanceBlock:^(YKAlertView * _Nonnull maker) {
+                maker.addActionTitle(@"标题1");
+                maker.addActionTitle(@"标题2");
+                maker.addActionTitle(@"标题3");
+            } actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+                NSLog(@"自定义sheet %@--%ld", title, buttonIndex);
+            }];
+        }
+        
     }
     
 }
