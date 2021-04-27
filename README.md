@@ -157,7 +157,7 @@ __block float count = 0.;
  
  ```
 
-## YKAlertView ##
+## YKAlertSheet ##
 ### 1.带标题自定义AlertSheet提示弹窗,链式语法添加自定义action ###
  
 ```
@@ -185,3 +185,36 @@ __block float count = 0.;
 }];
 
 ```
+
+## YKAlertView ##
+### 1.常规Alert提示弹窗,两个操作按钮,按钮标题颜色支持自定义 ###
+```
+[YKAlertView yk_showAlertViewWithTitle:@"标题" message:@"副标题" appearanceBlock:^(YKAlertView * _Nonnull maker) {
+    maker.addActionTitle(@"标题1");
+    maker.addActionTitleColor(@"标题2",UIColor.cyanColor);
+} actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+    NSLog(@"自定义常规alert %@--%ld", title, buttonIndex);
+}];
+
+```
+
+### 2.Alert提示弹窗,自定义操作按钮数量,按钮标题颜色支持自定义 ###
+```
+[YKAlertView yk_showAlertViewWithTitle:@"标题" message:@"副标题" appearanceBlock:^(YKAlertView * _Nonnull maker) {
+    maker.addActionTitle(@"标题1");
+    maker.addActionTitleColor(@"标题2",UIColor.redColor);
+    maker.addActionTitle(@"标题3");
+} actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+    NSLog(@"自定义alert %@--%ld", title, buttonIndex);
+}];
+
+```
+
+
+## YKAlertView自定义弹窗AlertSheet和AlertView都支持配置按钮标题颜色,参照如下方法设置 ##
+```
+// 链式构造,添加alertAction按钮,并自定义title颜色
+- (YKActionTitleColorBlock)addActionTitleColor;
+```
+
+版本会持续更新,有问题请联系QQ:326054969,请添加备注,谢谢~

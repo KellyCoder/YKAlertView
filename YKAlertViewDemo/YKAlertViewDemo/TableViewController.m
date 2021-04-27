@@ -39,6 +39,8 @@
         @[
             @"仿微信,自定义带标题AlertSheet",
             @"不带标题AlertSheet",
+            @"自定义按钮AlertView",
+            @"自定义按钮AlertView-常规双按钮",
         ]
     ];
     
@@ -233,6 +235,7 @@
                 maker.addActionTitle(@"标题4");
                 maker.addActionTitle(@"标题5");
                 maker.addActionTitle(@"标题6");
+                maker.addActionTitleColor(@"标题7",UIColor.cyanColor);
             } actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
                 NSLog(@"自定义sheet %@--%ld", title, buttonIndex);
             }];
@@ -243,6 +246,21 @@
                 maker.addActionTitle(@"标题3");
             } actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
                 NSLog(@"自定义sheet %@--%ld", title, buttonIndex);
+            }];
+        }else if (indexPath.row == 2){
+            [YKAlertView yk_showAlertViewWithTitle:@"标题" message:@"副标题" appearanceBlock:^(YKAlertView * _Nonnull maker) {
+                maker.addActionTitle(@"标题1");
+                maker.addActionTitleColor(@"标题2",UIColor.redColor);
+                maker.addActionTitle(@"标题3");
+            } actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+                NSLog(@"自定义alert %@--%ld", title, buttonIndex);
+            }];
+        }else if (indexPath.row == 3){
+            [YKAlertView yk_showAlertViewWithTitle:@"标题" message:@"副标题" appearanceBlock:^(YKAlertView * _Nonnull maker) {
+                maker.addActionTitle(@"标题1");
+                maker.addActionTitleColor(@"标题2",UIColor.cyanColor);
+            } actionBlock:^(YKAlertView * _Nonnull alertSelf, NSString * _Nonnull title, NSUInteger buttonIndex) {
+                NSLog(@"自定义常规alert %@--%ld", title, buttonIndex);
             }];
         }
         
