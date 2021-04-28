@@ -65,3 +65,14 @@ fastlane/test_output
 
 iOSInjectionProject/
 YKAlertViewDemo/
+YKAlertManager/SysAlertView/SysAlertController.h
+YKAlertManager/SysAlertView/SysAlertController.m
+YKAlertManager/SysAlertView/SysAlertHeader.h
+YKAlertManager/SysAlertView/SysAlertView.h
+YKAlertManager/SysAlertView/SysAlertView.m
+YKAlertManager/YKAlertView/YKActionSheetCell.h
+YKAlertManager/YKAlertView/YKActionSheetCell.m
+YKAlertManager/YKAlertView/YKActionSheetCell.xib
+YKAlertManager/YKAlertView/YKAlertView.h
+YKAlertManager/YKAlertView/YKAlertView.m
+YKAlertManager/YKAlertView/YKAlertViewHeader.h
