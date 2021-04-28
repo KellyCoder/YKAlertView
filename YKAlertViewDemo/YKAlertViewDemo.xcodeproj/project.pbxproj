@@ -158,11 +158,11 @@
 		8DA4C5AA2638FB3F002A5412 /* SysAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				8DA4C5AB2638FB3F002A5412 /* SysAlertController.m */,
-				8DA4C5AC2638FB3F002A5412 /* SysAlertView.m */,
 				8DA4C5AD2638FB3F002A5412 /* SysAlertHeader.h */,
-				8DA4C5AE2638FB3F002A5412 /* SysAlertController.h */,
 				8DA4C5AF2638FB3F002A5412 /* SysAlertView.h */,
+				8DA4C5AC2638FB3F002A5412 /* SysAlertView.m */,
+				8DA4C5AE2638FB3F002A5412 /* SysAlertController.h */,
+				8DA4C5AB2638FB3F002A5412 /* SysAlertController.m */,
 			);
 			path = SysAlertView;
 			sourceTree = "<group>";
@@ -170,12 +170,12 @@
 		8DA4C5B02638FB3F002A5412 /* YKAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				8DA4C5B12638FB3F002A5412 /* YKAlertView.m */,
-				8DA4C5B22638FB3F002A5412 /* YKActionSheetCell.m */,
-				8DA4C5B32638FB3F002A5412 /* YKActionSheetCell.xib */,
 				8DA4C5B42638FB3F002A5412 /* YKAlertViewHeader.h */,
 				8DA4C5B52638FB3F002A5412 /* YKAlertView.h */,
+				8DA4C5B12638FB3F002A5412 /* YKAlertView.m */,
 				8DA4C5B62638FB3F002A5412 /* YKActionSheetCell.h */,
+				8DA4C5B22638FB3F002A5412 /* YKActionSheetCell.m */,
+				8DA4C5B32638FB3F002A5412 /* YKActionSheetCell.xib */,
 			);
 			path = YKAlertView;
 			sourceTree = "<group>";
