@@ -166,6 +166,7 @@
             [self yk_showActionSheetWithTitle:@"UIAlertController-ActionSheet" message:@"基于UIAlertController封装,支持自定义添加ActionSheet和响应" appearanceBlock:^(SysAlertController * _Nonnull maker) {
                 
                 maker.addActionTitle(@"确定");
+                maker.addActionTitle(@"确定1");
                 maker.addActionDestructiveTitle(@"destructive");
                 maker.addActionCancelTitle(@"取消");
                 
