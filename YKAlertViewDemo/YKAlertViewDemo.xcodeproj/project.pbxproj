@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D6140E32636CC7700DB99CD /* YKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6140E22636CC7700DB99CD /* YKAlertView.m */; };
-		8D6140EA2636CE1800DB99CD /* YKActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6140E82636CE1800DB99CD /* YKActionSheetCell.m */; };
-		8D6140EB2636CE1800DB99CD /* YKActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6140E92636CE1800DB99CD /* YKActionSheetCell.xib */; };
 		8D74BBD026354B3F007178C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BBCF26354B3F007178C8 /* AppDelegate.m */; };
 		8D74BBDB26354B42007178C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D74BBDA26354B42007178C8 /* Assets.xcassets */; };
 		8D74BBDE26354B42007178C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D74BBDC26354B42007178C8 /* LaunchScreen.storyboard */; };
@@ -17,8 +14,11 @@
 		8D74BBEB26354B43007178C8 /* YKAlertViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BBEA26354B43007178C8 /* YKAlertViewDemoTests.m */; };
 		8D74BBF626354B43007178C8 /* YKAlertViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BBF526354B43007178C8 /* YKAlertViewDemoUITests.m */; };
 		8D74BC0B26354BC1007178C8 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BC0A26354BC1007178C8 /* TableViewController.m */; };
-		8D74BC5026355E81007178C8 /* SysAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BC4F26355E81007178C8 /* SysAlertView.m */; };
-		8D74BC5926355E9C007178C8 /* SysAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D74BC5826355E9C007178C8 /* SysAlertController.m */; };
+		8DA4C59B2638F75E002A5412 /* SysAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4C58F2638F75E002A5412 /* SysAlertController.m */; };
+		8DA4C59C2638F75E002A5412 /* SysAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4C5902638F75E002A5412 /* SysAlertView.m */; };
+		8DA4C59D2638F75E002A5412 /* YKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4C5952638F75E002A5412 /* YKAlertView.m */; };
+		8DA4C59E2638F75E002A5412 /* YKActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4C5962638F75E002A5412 /* YKActionSheetCell.m */; };
+		8DA4C59F2638F75E002A5412 /* YKActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4C5972638F75E002A5412 /* YKActionSheetCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D6140DD2636C1EB00DB99CD /* YKAlertViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAlertViewHeader.h; sourceTree = "<group>"; };
-		8D6140E12636CC7700DB99CD /* YKAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAlertView.h; sourceTree = "<group>"; };
-		8D6140E22636CC7700DB99CD /* YKAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKAlertView.m; sourceTree = "<group>"; };
-		8D6140E72636CE1800DB99CD /* YKActionSheetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKActionSheetCell.h; sourceTree = "<group>"; };
-		8D6140E82636CE1800DB99CD /* YKActionSheetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKActionSheetCell.m; sourceTree = "<group>"; };
-		8D6140E92636CE1800DB99CD /* YKActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YKActionSheetCell.xib; sourceTree = "<group>"; };
 		8D74BBCB26354B3F007178C8 /* YKAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D74BBCE26354B3F007178C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D74BBCF26354B3F007178C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,11 +54,17 @@
 		8D74BBF726354B43007178C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D74BC0926354BC1007178C8 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		8D74BC0A26354BC1007178C8 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		8D74BC4E26355E81007178C8 /* SysAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SysAlertView.h; sourceTree = "<group>"; };
-		8D74BC4F26355E81007178C8 /* SysAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SysAlertView.m; sourceTree = "<group>"; };
-		8D74BC5726355E9C007178C8 /* SysAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SysAlertController.h; sourceTree = "<group>"; };
-		8D74BC5826355E9C007178C8 /* SysAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SysAlertController.m; sourceTree = "<group>"; };
-		8D74BC5D26357E10007178C8 /* SysAlertHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SysAlertHeader.h; sourceTree = "<group>"; };
+		8DA4C58F2638F75E002A5412 /* SysAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SysAlertController.m; sourceTree = "<group>"; };
+		8DA4C5902638F75E002A5412 /* SysAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SysAlertView.m; sourceTree = "<group>"; };
+		8DA4C5912638F75E002A5412 /* SysAlertHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysAlertHeader.h; sourceTree = "<group>"; };
+		8DA4C5922638F75E002A5412 /* SysAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysAlertController.h; sourceTree = "<group>"; };
+		8DA4C5932638F75E002A5412 /* SysAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysAlertView.h; sourceTree = "<group>"; };
+		8DA4C5952638F75E002A5412 /* YKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAlertView.m; sourceTree = "<group>"; };
+		8DA4C5962638F75E002A5412 /* YKActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKActionSheetCell.m; sourceTree = "<group>"; };
+		8DA4C5972638F75E002A5412 /* YKActionSheetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKActionSheetCell.xib; sourceTree = "<group>"; };
+		8DA4C5982638F75E002A5412 /* YKAlertViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAlertViewHeader.h; sourceTree = "<group>"; };
+		8DA4C5992638F75E002A5412 /* YKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAlertView.h; sourceTree = "<group>"; };
+		8DA4C59A2638F75E002A5412 /* YKActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKActionSheetCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,19 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D6140D92636B3A700DB99CD /* YKAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				8D6140DD2636C1EB00DB99CD /* YKAlertViewHeader.h */,
-				8D6140E12636CC7700DB99CD /* YKAlertView.h */,
-				8D6140E22636CC7700DB99CD /* YKAlertView.m */,
-				8D6140E72636CE1800DB99CD /* YKActionSheetCell.h */,
-				8D6140E82636CE1800DB99CD /* YKActionSheetCell.m */,
-				8D6140E92636CE1800DB99CD /* YKActionSheetCell.xib */,
-			);
-			path = YKAlertView;
-			sourceTree = "<group>";
-		};
 		8D74BBC226354B3E007178C8 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +115,7 @@
 		8D74BBCD26354B3F007178C8 /* YKAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8D74BC4C26355E41007178C8 /* YKAlertManager */,
+				8DA4C58D2638F75E002A5412 /* YKAlertManager */,
 				8D74BBCE26354B3F007178C8 /* AppDelegate.h */,
 				8D74BBCF26354B3F007178C8 /* AppDelegate.m */,
 				8D74BC0926354BC1007178C8 /* TableViewController.h */,
@@ -159,25 +146,38 @@
 			path = YKAlertViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		8D74BC4C26355E41007178C8 /* YKAlertManager */ = {
+		8DA4C58D2638F75E002A5412 /* YKAlertManager */ = {
 			isa = PBXGroup;
 			children = (
-				8D6140D92636B3A700DB99CD /* YKAlertView */,
-				8D74BC4D26355E48007178C8 /* SysAlertView */,
+				8DA4C58E2638F75E002A5412 /* SysAlertView */,
+				8DA4C5942638F75E002A5412 /* YKAlertView */,
 			);
 			path = YKAlertManager;
 			sourceTree = "<group>";
 		};
-		8D74BC4D26355E48007178C8 /* SysAlertView */ = {
+		8DA4C58E2638F75E002A5412 /* SysAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				8D74BC5D26357E10007178C8 /* SysAlertHeader.h */,
-				8D74BC4E26355E81007178C8 /* SysAlertView.h */,
-				8D74BC4F26355E81007178C8 /* SysAlertView.m */,
-				8D74BC5726355E9C007178C8 /* SysAlertController.h */,
-				8D74BC5826355E9C007178C8 /* SysAlertController.m */,
+				8DA4C5912638F75E002A5412 /* SysAlertHeader.h */,
+				8DA4C5922638F75E002A5412 /* SysAlertController.h */,
+				8DA4C58F2638F75E002A5412 /* SysAlertController.m */,
+				8DA4C5932638F75E002A5412 /* SysAlertView.h */,
+				8DA4C5902638F75E002A5412 /* SysAlertView.m */,
 			);
 			path = SysAlertView;
+			sourceTree = "<group>";
+		};
+		8DA4C5942638F75E002A5412 /* YKAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8DA4C5982638F75E002A5412 /* YKAlertViewHeader.h */,
+				8DA4C5992638F75E002A5412 /* YKAlertView.h */,
+				8DA4C5952638F75E002A5412 /* YKAlertView.m */,
+				8DA4C59A2638F75E002A5412 /* YKActionSheetCell.h */,
+				8DA4C5962638F75E002A5412 /* YKActionSheetCell.m */,
+				8DA4C5972638F75E002A5412 /* YKActionSheetCell.xib */,
+			);
+			path = YKAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D6140EB2636CE1800DB99CD /* YKActionSheetCell.xib in Resources */,
+				8DA4C59F2638F75E002A5412 /* YKActionSheetCell.xib in Resources */,
 				8D74BBDE26354B42007178C8 /* LaunchScreen.storyboard in Resources */,
 				8D74BBDB26354B42007178C8 /* Assets.xcassets in Resources */,
 			);
@@ -310,12 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D74BBD026354B3F007178C8 /* AppDelegate.m in Sources */,
-				8D6140E32636CC7700DB99CD /* YKAlertView.m in Sources */,
+				8DA4C59D2638F75E002A5412 /* YKAlertView.m in Sources */,
 				8D74BBE126354B42007178C8 /* main.m in Sources */,
+				8DA4C59B2638F75E002A5412 /* SysAlertController.m in Sources */,
 				8D74BC0B26354BC1007178C8 /* TableViewController.m in Sources */,
-				8D74BC5026355E81007178C8 /* SysAlertView.m in Sources */,
-				8D6140EA2636CE1800DB99CD /* YKActionSheetCell.m in Sources */,
-				8D74BC5926355E9C007178C8 /* SysAlertController.m in Sources */,
+				8DA4C59E2638F75E002A5412 /* YKActionSheetCell.m in Sources */,
+				8DA4C59C2638F75E002A5412 /* SysAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
