@@ -1,7 +1,8 @@
-# YKAlertView
- 一、 基于UIAlertView/UIAlertController封装，支持链式语法自定义按钮，可根据按钮index区分响应；
+# YKAlertView 
+ 一、 仿微信底部弹窗,支持链式语法添加自定义按钮,可选添加标题与副标题,支持xib自定义视图, 可根据按钮index区分响应。
  
- 二、 仿微信底部弹窗,支持链式语法添加自定义按钮,可选添加标题与副标题,支持xib自定义视图, 可根据按钮index区分响应。
+ 二、 基于UIAlertView/UIAlertController封装，支持链式语法自定义按钮，可根据按钮index区分响应；
+  
  详细用法参考[YKAlertView](https://github.com/KellyCoder/YKAlertView)
  ## SysAlertView ##
  ### 1.双按钮提示弹窗 ###
